@@ -10,18 +10,8 @@
 
 		<script type="text/javascript">
 			
-				var time = 20; /* how long the timer runs for */
-				var initialOffset = '1300';
-				var i = 1
-				var interval = setInterval(function() {
-				    $('.circle_animation').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
-				    $('h2').text(i);
-				    if (i == time) {
-				        clearInterval(interval);
-				    }
-				    i++;  
-				}, 1000);
 				
+				teste();
 				
 				function teste(){
 				var time = 20; /* how long the timer runs for */
@@ -38,32 +28,26 @@
 				
 				}
 				
+				
+				
 				function arroz(id){
-                    console.log(id);
-                    var a = $("#"+id).attr('class'); 
-                    console.log(a);
+                    //Verifica as classes que tem no id
+					var a = $("#"+id).attr('class'); 
+                    //Dividi as classes que existem no id
                     var classNames = a.split(' ');
-                    console.log(classNames);
-                  
-				if(classNames[0] === "correta"){
-                           
-                            $("#"+id).addClass("selected");
                     
-                       
+                //Verifica se a primeira classe é a correta  
+				if(classNames[0] === "correta"){
+                    $("#"+id).addClass("selected");   //se for a classe correta adiciona a classe selected  
                 }else{
-                        $("#"+id).addClass("selectede");
+                        $("#"+id).addClass("selectede"); //se não for a classe correta adiciona a classe selectede  
                   }
-                    $("#"+id).addClass('no-hover');
-                     $( "#"+id).effect( 'pulsate', 500  );
+                    $("#"+id).addClass('no-hover'); //Adiciona a classe nao hover para desativar o efeito hover
+                    $( "#"+id).effect( 'pulsate', 500  ); //pisca o id selecionado com o efeito pulsate por 1/2 segundo
                     $( "#"+id).effect( 'pulsate', 500   );
 			}
 			
 		</script>
-        <script>
-        
-       
-        
-        </script>
 	</head>
 	
 	<body>
@@ -71,8 +55,8 @@
 			
 	<div class="topo">
 		<h1>
-		Qual é o melhor pokemon de fogo que existe?
-	</h1>
+			Qual é o melhor pokemon de fogo que existe?
+		</h1>
 	</div>
 
 	<div class="both"></div>
@@ -122,11 +106,10 @@
 
 		</section>
 		
-		<button onclick="teste()"> TEste
+		<button onclick="teste()"> Passa
 		</button>
 		<footer>
-
-			
+			Desenvolvido por <a href="rodrigorgrb.com.br"> Rodrigo </a> e Luisa
 		</footer>
 
 	</body>

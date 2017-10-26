@@ -105,3 +105,18 @@ svg {
     background: linear-gradient( red,red,red);
 }
 
+footer{
+	background:black;
+	color:white;
+	text-align:center;
+	padding:20px 0;
+}
+
+footer a{
+	color:white;
+}
+
+footer a:hover{
+	text-decoration:underline;
+}
+
