@@ -1,0 +1,107 @@
+/*GERAL*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration-line: none;
+	text-decoration-style: none;
+	text-decoration-color: white;
+	}
+
+body {
+	
+	background: linear-gradient(45deg,#000066,#0000cc, #000066,#0000cc,#000066,#0000cc,#000066);
+	font-family: Arial , Helvetica, sans-serif;
+	}
+
+.both{
+	clear: both;
+}
+.geral {
+	width: 50%;
+	float: left;
+	}
+
+/*PERGUNTAS*/
+
+.topo {
+	background: linear-gradient( #990033, #cc3333,#990033);
+	font-family: Arial , Helvetica, sans-serif;
+	background-color: red;
+	border: 5px solid white;
+    border-radius: 5px;
+	width: 98%;
+	background-color: #fff;
+	margin: 20px auto 0 auto;
+	font-size: 32px;
+	color: white;
+	}
+
+/*RESPOSTAS*/
+.respostas h1, #topo h1 {
+	margin: 10px;
+	color: white;
+}
+
+
+.respostas {
+	float: left;
+	background: linear-gradient( #990033, #cc3333,#990033);
+	font-family: Arial , Helvetica, sans-serif;
+	background-color: red;
+	border: 5px solid white;
+    border-radius: 5px;
+	height: 100px;
+	width: 96%;
+	background-color: #fff;
+	margin: 5px auto 0 auto;
+	font-size:26px;
+	}
+.respostas:not(.no-hover):hover {
+	background: linear-gradient(blue,blue);
+}
+
+/*RELÓGIO*/
+
+.item {
+    position: relative;
+    float: left;
+}
+
+.item h2 {
+	color: white;
+    text-align:center;
+    position: absolute;
+    line-height: 125px;
+    width: 100%;
+}
+
+svg {
+   -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.circle_animation {
+  stroke-dasharray: 1300; /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 1300;
+  transition: all 1s linear;
+}
+/*.relogio{
+	margin: 19% 40% auto;
+
+}*/
+.teste{
+	background-color:red;
+	color:green;
+}
+
+.selected{
+    background: linear-gradient( green,green,green);
+}
+
+.selectede{
+    background: linear-gradient( red,red,red);
+}
+

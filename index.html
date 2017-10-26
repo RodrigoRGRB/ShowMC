@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Quiz</title>
+		<link href="estilo.css" rel="stylesheet" type="text/css">
+		<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<script type="text/javascript">
+			
+				var time = 20; /* how long the timer runs for */
+				var initialOffset = '1300';
+				var i = 1
+				var interval = setInterval(function() {
+				    $('.circle_animation').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
+				    $('h2').text(i);
+				    if (i == time) {
+				        clearInterval(interval);
+				    }
+				    i++;  
+				}, 1000);
+				
+				
+				function teste(){
+				var time = 20; /* how long the timer runs for */
+				var initialOffset = '1300';
+				var i = 0
+				var interval = setInterval(function() {
+				    $('.circle_animation').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
+				    $('h2').text(i);
+				    if (i == time) {
+				        clearInterval(interval);
+				    }
+				    i++;  
+				}, 1000);
+				
+				}
+				
+				function arroz(id){
+                    console.log(id);
+                    var a = $("#"+id).attr('class'); 
+                    console.log(a);
+                    var classNames = a.split(' ');
+                    console.log(classNames);
+                  
+				if(classNames[0] === "correta"){
+                           
+                            $("#"+id).addClass("selected");
+                    
+                       
+                }else{
+                        $("#"+id).addClass("selectede");
+                  }
+                    $("#"+id).addClass('no-hover');
+                     $( "#"+id).effect( 'pulsate', 500  );
+                    $( "#"+id).effect( 'pulsate', 500   );
+			}
+			
+		</script>
+        <script>
+        
+       
+        
+        </script>
+	</head>
+	
+	<body>
+		
+			
+	<div class="topo">
+		<h1>
+		Qual é o melhor pokemon de fogo que existe?
+	</h1>
+	</div>
+
+	<div class="both"></div>
+		
+
+		
+		<section class="geral">
+	
+
+				<div class="correta respostas" id="a" onclick="arroz('a')">
+					<h1>A. Charizard</h1>
+				</div>
+
+	
+				<div class="respostas" id="b" onclick="arroz('b')">
+					<h1>B. Charmander</h1>
+				</div>
+		
+	
+				<div class="respostas" id="c" onclick="arroz('c')">
+					<h1>C. Magmar</h1>
+				</div>
+		
+
+	
+				<div class="respostas" id="d" onclick="arroz('d')">
+					<h1>D. Arcanine</h1>
+				</div>
+	
+
+
+		</section>
+
+		<section class="geral">
+			
+			<div class="relogio">	
+				<div class="item html">
+				    <h2>0</h2>
+				    <svg  width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+				     <g>
+				      <title>Layer 1</title>
+				      <circle id="circle" class="circle_animation" cx="300" cy="300" r="200" stroke-width="26" stroke="#6fdb6f" fill="none"/>
+				     </g>
+				    </svg>
+				</div>
+			</div>
+
+		</section>
+		
+		<button onclick="teste()"> TEste
+		</button>
+		<footer>
+
+			
+		</footer>
+
+	</body>
+</html>
